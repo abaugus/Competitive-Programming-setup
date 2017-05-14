@@ -16,3 +16,22 @@ void EulerTotient()
         }
     }
 }
+
+ll modPower(ll a,ll b,ll mod) 
+{
+	ll x = 1, y = a;
+    while(b > 0) {
+        if(b%2 == 1) {
+            x=(x*y);
+            if(x>mod) x%=mod;
+        }
+        y = (y*y);
+        if(y>mod) y%=mod;
+        b /= 2;
+    }
+    return x;
+}
+ll modInverse(ll a,ll mod)
+{	
+	return modPower(a,mod-2,mod); 
+}
