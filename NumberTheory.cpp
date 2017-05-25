@@ -61,7 +61,7 @@ void getFactors(int n)
 
 // Finding Divisors
 vector<int> divisors;
-void getDivisors(int ind = 0;int res = 1)
+void getDivisors(int ind = 0,int res = 1)
 {
 	if(ind == factors.size())
 	{
